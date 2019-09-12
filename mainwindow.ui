@@ -1,0 +1,3881 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1181</width>
+    <height>929</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="currentIndex">
+       <number>2</number>
+      </property>
+      <widget class="QWidget" name="serialTab">
+       <attribute name="title">
+        <string>串口助手</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_2">
+        <item row="0" column="0">
+         <widget class="QLabel" name="label_4">
+          <property name="text">
+           <string>数据接收区：</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QTextEdit" name="outPutTextEdit">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(0, 255, 21);
+background-color: rgb(0, 0, 0);</string>
+          </property>
+          <property name="readOnly">
+           <bool>true</bool>
+          </property>
+          <property name="html">
+           <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'SimSun'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QLabel" name="label_3">
+          <property name="text">
+           <string>数据发送区：</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1" rowspan="3">
+         <widget class="QGroupBox" name="serialGroupBox">
+          <property name="minimumSize">
+           <size>
+            <width>300</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="title">
+           <string/>
+          </property>
+          <widget class="QPushButton" name="openSerialPushButton">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>260</y>
+             <width>271</width>
+             <height>41</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>打开串口</string>
+           </property>
+          </widget>
+          <widget class="QGroupBox" name="groupBox">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>-10</y>
+             <width>291</width>
+             <height>91</height>
+            </rect>
+           </property>
+           <property name="title">
+            <string/>
+           </property>
+           <widget class="QPushButton" name="portSearchPushButton">
+            <property name="geometry">
+             <rect>
+              <x>120</x>
+              <y>20</y>
+              <width>161</width>
+              <height>28</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>端口搜索</string>
+            </property>
+           </widget>
+           <widget class="QComboBox" name="portComboBox">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>50</y>
+              <width>271</width>
+              <height>31</height>
+             </rect>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>30</y>
+              <width>72</width>
+              <height>15</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>端口选择：</string>
+            </property>
+           </widget>
+          </widget>
+          <widget class="QGroupBox" name="groupBox_2">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>80</y>
+             <width>291</width>
+             <height>171</height>
+            </rect>
+           </property>
+           <property name="title">
+            <string/>
+           </property>
+           <widget class="QComboBox" name="baudComboBox">
+            <property name="geometry">
+             <rect>
+              <x>120</x>
+              <y>20</y>
+              <width>161</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <item>
+             <property name="text">
+              <string>1200</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>2400</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>4800</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>9600</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>19200</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>38400</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>43000</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>57600</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>76800</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>115200</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>128000</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>230400</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>256000</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>460800</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>921600</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>1382400</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>自定义</string>
+             </property>
+            </item>
+           </widget>
+           <widget class="QLabel" name="label_10">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>150</y>
+              <width>72</width>
+              <height>15</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>奇偶校验：</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_7">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>30</y>
+              <width>72</width>
+              <height>15</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>波特率：</string>
+            </property>
+           </widget>
+           <widget class="QComboBox" name="checkBitComboBox">
+            <property name="geometry">
+             <rect>
+              <x>120</x>
+              <y>140</y>
+              <width>161</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <item>
+             <property name="text">
+              <string>无</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>奇校验</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>偶校验</string>
+             </property>
+            </item>
+           </widget>
+           <widget class="QComboBox" name="dataBitComboBox">
+            <property name="geometry">
+             <rect>
+              <x>120</x>
+              <y>100</y>
+              <width>161</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <item>
+             <property name="text">
+              <string>8</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>7</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>6</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>5</string>
+             </property>
+            </item>
+           </widget>
+           <widget class="QComboBox" name="stopBitComboBox">
+            <property name="geometry">
+             <rect>
+              <x>120</x>
+              <y>60</y>
+              <width>161</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <item>
+             <property name="text">
+              <string>1</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>1.5</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>2</string>
+             </property>
+            </item>
+           </widget>
+           <widget class="QLabel" name="label_9">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>110</y>
+              <width>72</width>
+              <height>15</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>数据位：</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_8">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>70</y>
+              <width>72</width>
+              <height>15</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>停止位：</string>
+            </property>
+           </widget>
+          </widget>
+          <widget class="QGroupBox" name="dataRecvGroupBox">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>313</y>
+             <width>291</width>
+             <height>181</height>
+            </rect>
+           </property>
+           <property name="title">
+            <string/>
+           </property>
+           <widget class="QPushButton" name="cleanOutputPushButton">
+            <property name="geometry">
+             <rect>
+              <x>150</x>
+              <y>20</y>
+              <width>131</width>
+              <height>28</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>清除接收</string>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="saveOutputPushButton">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>20</y>
+              <width>131</width>
+              <height>28</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>保存接收窗口</string>
+            </property>
+           </widget>
+           <widget class="QCheckBox" name="hexOutputCheckBox">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>60</y>
+              <width>121</width>
+              <height>19</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>十六进制显示</string>
+            </property>
+           </widget>
+           <widget class="QCheckBox" name="wordWrapCheckBox">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="geometry">
+             <rect>
+              <x>150</x>
+              <y>60</y>
+              <width>91</width>
+              <height>19</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>自动换行</string>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+            <property name="checked">
+             <bool>true</bool>
+            </property>
+           </widget>
+           <widget class="QCheckBox" name="timeStampCheckBox">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="geometry">
+             <rect>
+              <x>150</x>
+              <y>90</y>
+              <width>101</width>
+              <height>21</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>换行断帧</string>
+            </property>
+            <property name="checked">
+             <bool>false</bool>
+            </property>
+           </widget>
+           <widget class="QCheckBox" name="rtsCheckBox">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>90</y>
+              <width>121</width>
+              <height>19</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>RTS</string>
+            </property>
+           </widget>
+           <widget class="QCheckBox" name="dtrCheckBox">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="geometry">
+             <rect>
+              <x>70</x>
+              <y>90</y>
+              <width>51</width>
+              <height>19</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>DTR</string>
+            </property>
+           </widget>
+           <widget class="QCheckBox" name="showOtherUIRecvCheckBox">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>120</y>
+              <width>191</width>
+              <height>21</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>显示其他界面的接收数据</string>
+            </property>
+           </widget>
+           <widget class="QCheckBox" name="whiteAndBlackCheckBox">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>150</y>
+              <width>171</width>
+              <height>19</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>白底黑字   文字编码</string>
+            </property>
+           </widget>
+           <widget class="QComboBox" name="recvEncodingComboBox">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="geometry">
+             <rect>
+              <x>180</x>
+              <y>150</y>
+              <width>101</width>
+              <height>21</height>
+             </rect>
+            </property>
+            <item>
+             <property name="text">
+              <string>ASCII</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>GB2312</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>UTF-8</string>
+             </property>
+            </item>
+           </widget>
+           <widget class="QPushButton" name="pushButton">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="geometry">
+             <rect>
+              <x>210</x>
+              <y>120</y>
+              <width>71</width>
+              <height>24</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>字体...</string>
+            </property>
+           </widget>
+          </widget>
+          <widget class="QGroupBox" name="dataSendGoupBox">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>600</y>
+             <width>291</width>
+             <height>201</height>
+            </rect>
+           </property>
+           <property name="title">
+            <string/>
+           </property>
+           <widget class="QPushButton" name="sendPushButton">
+            <property name="geometry">
+             <rect>
+              <x>20</x>
+              <y>20</y>
+              <width>261</width>
+              <height>41</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>发送（Ctrl+Enter）</string>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="saveInputPushButton">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="geometry">
+             <rect>
+              <x>150</x>
+              <y>70</y>
+              <width>131</width>
+              <height>28</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>保存数据</string>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="cleanInputPushButton">
+            <property name="geometry">
+             <rect>
+              <x>20</x>
+              <y>70</y>
+              <width>121</width>
+              <height>28</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>清除发送</string>
+            </property>
+           </widget>
+           <widget class="QCheckBox" name="sendNewLineCheckBox">
+            <property name="geometry">
+             <rect>
+              <x>150</x>
+              <y>110</y>
+              <width>91</width>
+              <height>19</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>发送新行</string>
+            </property>
+           </widget>
+           <widget class="QCheckBox" name="hexSendCheckBox">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>110</y>
+              <width>111</width>
+              <height>19</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>十六进制发送</string>
+            </property>
+           </widget>
+           <widget class="QCheckBox" name="timingSendCheckBox">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>130</y>
+              <width>171</width>
+              <height>19</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>定时发送: 发送周期:</string>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="periodLineEdit">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="geometry">
+             <rect>
+              <x>180</x>
+              <y>130</y>
+              <width>51</width>
+              <height>21</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_6">
+            <property name="geometry">
+             <rect>
+              <x>240</x>
+              <y>130</y>
+              <width>41</width>
+              <height>16</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>毫秒</string>
+            </property>
+           </widget>
+           <widget class="QCheckBox" name="echoCheckBox">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>150</y>
+              <width>171</width>
+              <height>16</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>在接收窗口显示回显</string>
+            </property>
+           </widget>
+           <widget class="QCheckBox" name="snedNowCheckBox">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>170</y>
+              <width>161</width>
+              <height>19</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>立刻发送  文字编码</string>
+            </property>
+           </widget>
+           <widget class="QComboBox" name="sendEncodingComboBox">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="geometry">
+             <rect>
+              <x>178</x>
+              <y>170</y>
+              <width>101</width>
+              <height>21</height>
+             </rect>
+            </property>
+            <item>
+             <property name="text">
+              <string>ASCII</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>GB2312</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>UTF-8</string>
+             </property>
+            </item>
+           </widget>
+          </widget>
+         </widget>
+        </item>
+        <item row="3" column="0">
+         <widget class="QTextEdit" name="inputTxtEdit">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>200</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab">
+       <attribute name="title">
+        <string>串口蓝牙</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <item>
+         <widget class="QGroupBox" name="groupBox_4">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>70</height>
+           </size>
+          </property>
+          <property name="title">
+           <string> 串口信息</string>
+          </property>
+          <widget class="QLabel" name="label_11">
+           <property name="geometry">
+            <rect>
+             <x>410</x>
+             <y>40</y>
+             <width>72</width>
+             <height>15</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>波特率：</string>
+           </property>
+          </widget>
+          <widget class="QLineEdit" name="bluetoothSerialLineEdit">
+           <property name="geometry">
+            <rect>
+             <x>90</x>
+             <y>30</y>
+             <width>301</width>
+             <height>31</height>
+            </rect>
+           </property>
+           <property name="readOnly">
+            <bool>true</bool>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_2">
+           <property name="geometry">
+            <rect>
+             <x>20</x>
+             <y>40</y>
+             <width>72</width>
+             <height>15</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>串口号：</string>
+           </property>
+          </widget>
+          <widget class="QLineEdit" name="bluetoothBaudLineEdit">
+           <property name="geometry">
+            <rect>
+             <x>470</x>
+             <y>30</y>
+             <width>113</width>
+             <height>31</height>
+            </rect>
+           </property>
+           <property name="readOnly">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="useBluetoothCheckBox">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>50</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>启用蓝牙检测（符合蓝牙AT指令集的数据将会被截取，不会传递到其他功能上）</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="BluetoothGroupBox">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>400</height>
+           </size>
+          </property>
+          <property name="title">
+           <string> 串口蓝牙（AT指令集）</string>
+          </property>
+          <widget class="QPushButton" name="pushButton_2">
+           <property name="geometry">
+            <rect>
+             <x>290</x>
+             <y>40</y>
+             <width>89</width>
+             <height>31</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>测试连接</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="pushButton_3">
+           <property name="geometry">
+            <rect>
+             <x>20</x>
+             <y>140</y>
+             <width>101</width>
+             <height>31</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>版本号</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="pushButton_4">
+           <property name="geometry">
+            <rect>
+             <x>20</x>
+             <y>190</y>
+             <width>101</width>
+             <height>31</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>帮助</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_15">
+           <property name="geometry">
+            <rect>
+             <x>220</x>
+             <y>170</y>
+             <width>72</width>
+             <height>15</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>蓝牙名称</string>
+           </property>
+          </widget>
+          <widget class="QLineEdit" name="lineEdit_6">
+           <property name="geometry">
+            <rect>
+             <x>290</x>
+             <y>160</y>
+             <width>191</width>
+             <height>31</height>
+            </rect>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="pushButton_6">
+           <property name="geometry">
+            <rect>
+             <x>490</x>
+             <y>160</y>
+             <width>51</width>
+             <height>31</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>设置</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="pushButton_7">
+           <property name="geometry">
+            <rect>
+             <x>20</x>
+             <y>240</y>
+             <width>101</width>
+             <height>31</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>恢复出厂设置</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="pushButton_8">
+           <property name="geometry">
+            <rect>
+             <x>20</x>
+             <y>290</y>
+             <width>101</width>
+             <height>31</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>复位</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_16">
+           <property name="geometry">
+            <rect>
+             <x>590</x>
+             <y>170</y>
+             <width>72</width>
+             <height>15</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>配对密码</string>
+           </property>
+          </widget>
+          <widget class="QLineEdit" name="lineEdit_7">
+           <property name="geometry">
+            <rect>
+             <x>660</x>
+             <y>160</y>
+             <width>191</width>
+             <height>31</height>
+            </rect>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="pushButton_10">
+           <property name="geometry">
+            <rect>
+             <x>860</x>
+             <y>160</y>
+             <width>51</width>
+             <height>31</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>设置</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_17">
+           <property name="geometry">
+            <rect>
+             <x>220</x>
+             <y>210</y>
+             <width>72</width>
+             <height>15</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>波特率</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="pushButton_12">
+           <property name="geometry">
+            <rect>
+             <x>490</x>
+             <y>200</y>
+             <width>51</width>
+             <height>31</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>设置</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_18">
+           <property name="geometry">
+            <rect>
+             <x>590</x>
+             <y>210</y>
+             <width>72</width>
+             <height>15</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>主从模式</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="pushButton_14">
+           <property name="geometry">
+            <rect>
+             <x>860</x>
+             <y>200</y>
+             <width>51</width>
+             <height>31</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>设置</string>
+           </property>
+          </widget>
+          <widget class="QComboBox" name="baudComboBox_2">
+           <property name="geometry">
+            <rect>
+             <x>290</x>
+             <y>200</y>
+             <width>191</width>
+             <height>31</height>
+            </rect>
+           </property>
+           <item>
+            <property name="text">
+             <string>1200</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>2400</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>4800</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>9600</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>19200</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>38400</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>57600</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>115200</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>230400</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>460800</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>921600</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>1382400</string>
+            </property>
+           </item>
+          </widget>
+          <widget class="QLabel" name="label_19">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>50</y>
+             <width>72</width>
+             <height>15</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>蓝牙型号</string>
+           </property>
+          </widget>
+          <widget class="QComboBox" name="comboBox">
+           <property name="geometry">
+            <rect>
+             <x>80</x>
+             <y>40</y>
+             <width>201</width>
+             <height>31</height>
+            </rect>
+           </property>
+           <item>
+            <property name="text">
+             <string>BT05</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>HC06</string>
+            </property>
+           </item>
+          </widget>
+          <widget class="QComboBox" name="comboBox_2">
+           <property name="geometry">
+            <rect>
+             <x>660</x>
+             <y>200</y>
+             <width>191</width>
+             <height>31</height>
+            </rect>
+           </property>
+           <item>
+            <property name="text">
+             <string>从模式</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>主模式</string>
+            </property>
+           </item>
+          </widget>
+          <widget class="QPushButton" name="pushButton_15">
+           <property name="geometry">
+            <rect>
+             <x>860</x>
+             <y>240</y>
+             <width>51</width>
+             <height>31</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>设置</string>
+           </property>
+          </widget>
+          <widget class="QLineEdit" name="lineEdit_8">
+           <property name="geometry">
+            <rect>
+             <x>660</x>
+             <y>240</y>
+             <width>191</width>
+             <height>31</height>
+            </rect>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_20">
+           <property name="geometry">
+            <rect>
+             <x>590</x>
+             <y>250</y>
+             <width>72</width>
+             <height>15</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>绑定地址</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_22">
+           <property name="geometry">
+            <rect>
+             <x>20</x>
+             <y>340</y>
+             <width>111</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>发送原始AT指令</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_23">
+           <property name="geometry">
+            <rect>
+             <x>20</x>
+             <y>370</y>
+             <width>41</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>指令：</string>
+           </property>
+          </widget>
+          <widget class="QLineEdit" name="lineEdit_9">
+           <property name="geometry">
+            <rect>
+             <x>70</x>
+             <y>362</y>
+             <width>791</width>
+             <height>31</height>
+            </rect>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="pushButton_19">
+           <property name="geometry">
+            <rect>
+             <x>870</x>
+             <y>360</y>
+             <width>89</width>
+             <height>31</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>发送</string>
+           </property>
+          </widget>
+          <widget class="QComboBox" name="comboBox_3">
+           <property name="geometry">
+            <rect>
+             <x>80</x>
+             <y>80</y>
+             <width>201</width>
+             <height>31</height>
+            </rect>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="pushButton_18">
+           <property name="geometry">
+            <rect>
+             <x>290</x>
+             <y>80</y>
+             <width>91</width>
+             <height>31</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>搜索设备</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="pushButton_20">
+           <property name="geometry">
+            <rect>
+             <x>490</x>
+             <y>80</y>
+             <width>91</width>
+             <height>31</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>连接设备</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_24">
+           <property name="geometry">
+            <rect>
+             <x>220</x>
+             <y>130</y>
+             <width>101</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>本机蓝牙信息：</string>
+           </property>
+          </widget>
+          <widget class="QLineEdit" name="lineEdit_10">
+           <property name="geometry">
+            <rect>
+             <x>290</x>
+             <y>240</y>
+             <width>191</width>
+             <height>31</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_25">
+           <property name="geometry">
+            <rect>
+             <x>220</x>
+             <y>250</y>
+             <width>72</width>
+             <height>15</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>本机地址</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="pushButton_16">
+           <property name="geometry">
+            <rect>
+             <x>490</x>
+             <y>240</y>
+             <width>51</width>
+             <height>31</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>设置</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_26">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>90</y>
+             <width>72</width>
+             <height>15</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>远端设备</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_28">
+           <property name="geometry">
+            <rect>
+             <x>220</x>
+             <y>290</y>
+             <width>72</width>
+             <height>15</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>自动搜索</string>
+           </property>
+          </widget>
+          <widget class="QComboBox" name="comboBox_4">
+           <property name="geometry">
+            <rect>
+             <x>290</x>
+             <y>280</y>
+             <width>191</width>
+             <height>31</height>
+            </rect>
+           </property>
+           <item>
+            <property name="text">
+             <string>否</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>是</string>
+            </property>
+           </item>
+          </widget>
+          <widget class="QPushButton" name="pushButton_17">
+           <property name="geometry">
+            <rect>
+             <x>490</x>
+             <y>280</y>
+             <width>51</width>
+             <height>31</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>设置</string>
+           </property>
+          </widget>
+          <widget class="QComboBox" name="comboBox_5">
+           <property name="geometry">
+            <rect>
+             <x>660</x>
+             <y>280</y>
+             <width>191</width>
+             <height>31</height>
+            </rect>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_29">
+           <property name="geometry">
+            <rect>
+             <x>580</x>
+             <y>290</y>
+             <width>81</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>已配对列表</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="pushButton_21">
+           <property name="geometry">
+            <rect>
+             <x>860</x>
+             <y>280</y>
+             <width>51</width>
+             <height>31</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>清除</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="pushButton_22">
+           <property name="geometry">
+            <rect>
+             <x>920</x>
+             <y>280</y>
+             <width>71</width>
+             <height>31</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>清除所有</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="pushButton_23">
+           <property name="geometry">
+            <rect>
+             <x>390</x>
+             <y>80</y>
+             <width>91</width>
+             <height>31</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>取消搜索</string>
+           </property>
+          </widget>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_21">
+          <property name="text">
+           <string>原始信息：</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QTextEdit" name="textEdit">
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(0, 0, 0);
+color: rgb(0, 255, 0);</string>
+          </property>
+          <property name="readOnly">
+           <bool>true</bool>
+          </property>
+          <property name="html">
+           <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'SimSun'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_2">
+       <attribute name="title">
+        <string>通用上位机</string>
+       </attribute>
+       <layout class="QFormLayout" name="formLayout">
+        <item row="0" column="0" colspan="2">
+         <widget class="QGroupBox" name="groupBox_5">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>70</height>
+           </size>
+          </property>
+          <property name="title">
+           <string> 串口信息</string>
+          </property>
+          <widget class="QLabel" name="label_12">
+           <property name="geometry">
+            <rect>
+             <x>410</x>
+             <y>40</y>
+             <width>72</width>
+             <height>15</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>波特率：</string>
+           </property>
+          </widget>
+          <widget class="QLineEdit" name="generalSerialLineEdit">
+           <property name="geometry">
+            <rect>
+             <x>90</x>
+             <y>30</y>
+             <width>301</width>
+             <height>31</height>
+            </rect>
+           </property>
+           <property name="readOnly">
+            <bool>true</bool>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_5">
+           <property name="geometry">
+            <rect>
+             <x>20</x>
+             <y>40</y>
+             <width>72</width>
+             <height>15</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>串口号：</string>
+           </property>
+          </widget>
+          <widget class="QLineEdit" name="generalBaudLineEdit">
+           <property name="geometry">
+            <rect>
+             <x>470</x>
+             <y>30</y>
+             <width>113</width>
+             <height>31</height>
+            </rect>
+           </property>
+           <property name="readOnly">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QCheckBox" name="useGeneralCheckBox">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>50</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>启用通用上位机（符合此功能的数据帧将会被截取，不会传递到其他功能上）</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QGroupBox" name="generalGroupBox">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>600</height>
+           </size>
+          </property>
+          <property name="title">
+           <string>上位机</string>
+          </property>
+          <widget class="QGroupBox" name="groupBox_3">
+           <property name="geometry">
+            <rect>
+             <x>490</x>
+             <y>40</y>
+             <width>621</width>
+             <height>271</height>
+            </rect>
+           </property>
+           <property name="title">
+            <string>PID参数读取/设置</string>
+           </property>
+           <widget class="QPushButton" name="pid0GetPushButton">
+            <property name="geometry">
+             <rect>
+              <x>520</x>
+              <y>20</y>
+              <width>41</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>读取</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_37">
+            <property name="geometry">
+             <rect>
+              <x>150</x>
+              <y>150</y>
+              <width>31</width>
+              <height>16</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>Kp：</string>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="pid0NameLineEdit">
+            <property name="geometry">
+             <rect>
+              <x>20</x>
+              <y>22</y>
+              <width>91</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: rgb(0, 0, 255);</string>
+            </property>
+            <property name="text">
+             <string>PID0</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_32">
+            <property name="geometry">
+             <rect>
+              <x>280</x>
+              <y>68</y>
+              <width>31</width>
+              <height>16</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>Ki：</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_36">
+            <property name="geometry">
+             <rect>
+              <x>410</x>
+              <y>108</y>
+              <width>31</width>
+              <height>16</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>Kd：</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_38">
+            <property name="geometry">
+             <rect>
+              <x>280</x>
+              <y>148</y>
+              <width>31</width>
+              <height>16</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>Ki：</string>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="pid3NameLineEdit">
+            <property name="geometry">
+             <rect>
+              <x>20</x>
+              <y>140</y>
+              <width>91</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: rgb(0, 0, 255);</string>
+            </property>
+            <property name="text">
+             <string>PID3</string>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="pid4KdLineEdit">
+            <property name="geometry">
+             <rect>
+              <x>440</x>
+              <y>178</y>
+              <width>71</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: rgb(255, 0, 0);</string>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="pid4SetPushButton">
+            <property name="geometry">
+             <rect>
+              <x>560</x>
+              <y>178</y>
+              <width>41</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>设置</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_27">
+            <property name="geometry">
+             <rect>
+              <x>280</x>
+              <y>30</y>
+              <width>31</width>
+              <height>16</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>Ki：</string>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="pid4KiLineEdit">
+            <property name="geometry">
+             <rect>
+              <x>310</x>
+              <y>178</y>
+              <width>71</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: rgb(255, 0, 0);</string>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="pid2KpLineEdit">
+            <property name="geometry">
+             <rect>
+              <x>180</x>
+              <y>100</y>
+              <width>71</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: rgb(255, 0, 0);</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_35">
+            <property name="geometry">
+             <rect>
+              <x>280</x>
+              <y>108</y>
+              <width>31</width>
+              <height>16</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>Ki：</string>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="pid3GetPushButton">
+            <property name="geometry">
+             <rect>
+              <x>520</x>
+              <y>138</y>
+              <width>41</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>读取</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_34">
+            <property name="geometry">
+             <rect>
+              <x>150</x>
+              <y>110</y>
+              <width>31</width>
+              <height>16</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>Kp：</string>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="pid1NameLineEdit">
+            <property name="geometry">
+             <rect>
+              <x>20</x>
+              <y>60</y>
+              <width>91</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: rgb(0, 0, 255);</string>
+            </property>
+            <property name="text">
+             <string>PID1</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_30">
+            <property name="geometry">
+             <rect>
+              <x>410</x>
+              <y>30</y>
+              <width>31</width>
+              <height>16</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>Kd：</string>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="pid2NameLineEdit">
+            <property name="geometry">
+             <rect>
+              <x>20</x>
+              <y>100</y>
+              <width>91</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: rgb(0, 0, 255);</string>
+            </property>
+            <property name="text">
+             <string>PID2</string>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="pid0KpLineEdit">
+            <property name="geometry">
+             <rect>
+              <x>180</x>
+              <y>22</y>
+              <width>71</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: rgb(255, 0, 0);</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_45">
+            <property name="geometry">
+             <rect>
+              <x>410</x>
+              <y>228</y>
+              <width>31</width>
+              <height>16</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>Kd：</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_14">
+            <property name="geometry">
+             <rect>
+              <x>150</x>
+              <y>32</y>
+              <width>31</width>
+              <height>16</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>Kp：</string>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="pid4KpLineEdit">
+            <property name="geometry">
+             <rect>
+              <x>180</x>
+              <y>180</y>
+              <width>71</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: rgb(255, 0, 0);</string>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="pid1KiLineEdit">
+            <property name="geometry">
+             <rect>
+              <x>310</x>
+              <y>58</y>
+              <width>71</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: rgb(255, 0, 0);</string>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="pid5NameLineEdit">
+            <property name="geometry">
+             <rect>
+              <x>20</x>
+              <y>220</y>
+              <width>91</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: rgb(0, 0, 255);</string>
+            </property>
+            <property name="text">
+             <string>PID5</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_42">
+            <property name="geometry">
+             <rect>
+              <x>410</x>
+              <y>188</y>
+              <width>31</width>
+              <height>16</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>Kd：</string>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="pid3KiLineEdit">
+            <property name="geometry">
+             <rect>
+              <x>310</x>
+              <y>138</y>
+              <width>71</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: rgb(255, 0, 0);</string>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="pid1SetPushButton">
+            <property name="geometry">
+             <rect>
+              <x>560</x>
+              <y>58</y>
+              <width>41</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>设置</string>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="pid5SetPushButton">
+            <property name="geometry">
+             <rect>
+              <x>560</x>
+              <y>218</y>
+              <width>41</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>设置</string>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="pid5KiLineEdit">
+            <property name="geometry">
+             <rect>
+              <x>310</x>
+              <y>218</y>
+              <width>71</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: rgb(255, 0, 0);</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_33">
+            <property name="geometry">
+             <rect>
+              <x>410</x>
+              <y>68</y>
+              <width>31</width>
+              <height>16</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>Kd：</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_39">
+            <property name="geometry">
+             <rect>
+              <x>410</x>
+              <y>148</y>
+              <width>31</width>
+              <height>16</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>Kd：</string>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="pid0SetPushButton">
+            <property name="geometry">
+             <rect>
+              <x>560</x>
+              <y>20</y>
+              <width>41</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>设置</string>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="pid1KpLineEdit">
+            <property name="geometry">
+             <rect>
+              <x>180</x>
+              <y>60</y>
+              <width>71</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: rgb(255, 0, 0);</string>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="pid3KpLineEdit">
+            <property name="geometry">
+             <rect>
+              <x>180</x>
+              <y>140</y>
+              <width>71</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: rgb(255, 0, 0);</string>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="pid2SetPushButton">
+            <property name="geometry">
+             <rect>
+              <x>560</x>
+              <y>98</y>
+              <width>41</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>设置</string>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="pid0KdLineEdit">
+            <property name="geometry">
+             <rect>
+              <x>440</x>
+              <y>20</y>
+              <width>71</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: rgb(255, 0, 0);</string>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="pid5GetPushButton">
+            <property name="geometry">
+             <rect>
+              <x>520</x>
+              <y>218</y>
+              <width>41</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>读取</string>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="pid4NameLineEdit">
+            <property name="geometry">
+             <rect>
+              <x>20</x>
+              <y>180</y>
+              <width>91</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: rgb(0, 0, 255);</string>
+            </property>
+            <property name="text">
+             <string>PID4</string>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="pid2KiLineEdit">
+            <property name="geometry">
+             <rect>
+              <x>310</x>
+              <y>98</y>
+              <width>71</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: rgb(255, 0, 0);</string>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="pid4GetPushButton">
+            <property name="geometry">
+             <rect>
+              <x>520</x>
+              <y>178</y>
+              <width>41</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>读取</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_41">
+            <property name="geometry">
+             <rect>
+              <x>280</x>
+              <y>188</y>
+              <width>31</width>
+              <height>16</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>Ki：</string>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="pid1KdLineEdit">
+            <property name="geometry">
+             <rect>
+              <x>440</x>
+              <y>58</y>
+              <width>71</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: rgb(255, 0, 0);</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_40">
+            <property name="geometry">
+             <rect>
+              <x>150</x>
+              <y>190</y>
+              <width>31</width>
+              <height>16</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>Kp：</string>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="pid3SetPushButton">
+            <property name="geometry">
+             <rect>
+              <x>560</x>
+              <y>138</y>
+              <width>41</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>设置</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_31">
+            <property name="geometry">
+             <rect>
+              <x>150</x>
+              <y>70</y>
+              <width>31</width>
+              <height>16</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>Kp：</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_44">
+            <property name="geometry">
+             <rect>
+              <x>280</x>
+              <y>228</y>
+              <width>31</width>
+              <height>16</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>Ki：</string>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="pid1GetPushButton">
+            <property name="geometry">
+             <rect>
+              <x>520</x>
+              <y>58</y>
+              <width>41</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>读取</string>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="pid0KiLineEdit">
+            <property name="geometry">
+             <rect>
+              <x>310</x>
+              <y>20</y>
+              <width>71</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: rgb(255, 0, 0);</string>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="pid5KpLineEdit">
+            <property name="geometry">
+             <rect>
+              <x>180</x>
+              <y>220</y>
+              <width>71</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: rgb(255, 0, 0);</string>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="pid2GetPushButton">
+            <property name="geometry">
+             <rect>
+              <x>520</x>
+              <y>98</y>
+              <width>41</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>读取</string>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="pid2KdLineEdit">
+            <property name="geometry">
+             <rect>
+              <x>440</x>
+              <y>98</y>
+              <width>71</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: rgb(255, 0, 0);</string>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="pid5KdLineEdit">
+            <property name="geometry">
+             <rect>
+              <x>440</x>
+              <y>218</y>
+              <width>71</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: rgb(255, 0, 0);</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_43">
+            <property name="geometry">
+             <rect>
+              <x>150</x>
+              <y>230</y>
+              <width>31</width>
+              <height>16</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>Kp：</string>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="pid3KdLineEdit">
+            <property name="geometry">
+             <rect>
+              <x>440</x>
+              <y>138</y>
+              <width>71</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: rgb(255, 0, 0);</string>
+            </property>
+           </widget>
+          </widget>
+          <widget class="QGroupBox" name="groupBox_6">
+           <property name="geometry">
+            <rect>
+             <x>490</x>
+             <y>310</y>
+             <width>611</width>
+             <height>231</height>
+            </rect>
+           </property>
+           <property name="title">
+            <string>自定义参数读取/设置</string>
+           </property>
+           <widget class="QLineEdit" name="custom0ValueLineEdit">
+            <property name="geometry">
+             <rect>
+              <x>110</x>
+              <y>30</y>
+              <width>91</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: rgb(255, 0, 0);</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="custom0NameLineEdit">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>30</y>
+              <width>91</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: rgb(0, 0, 255);</string>
+            </property>
+            <property name="text">
+             <string>自定义0</string>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="custom0SetPushbutton">
+            <property name="geometry">
+             <rect>
+              <x>250</x>
+              <y>30</y>
+              <width>41</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>设置</string>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="custom0GetPushbutton">
+            <property name="geometry">
+             <rect>
+              <x>210</x>
+              <y>30</y>
+              <width>41</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>读取</string>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="custom1ValueLineEdit">
+            <property name="geometry">
+             <rect>
+              <x>420</x>
+              <y>30</y>
+              <width>91</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: rgb(255, 0, 0);</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="custom1SetPushbutton">
+            <property name="geometry">
+             <rect>
+              <x>560</x>
+              <y>30</y>
+              <width>41</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>设置</string>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="custom1GetPushbutton">
+            <property name="geometry">
+             <rect>
+              <x>520</x>
+              <y>30</y>
+              <width>41</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>读取</string>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="custom1NameLineEdit">
+            <property name="geometry">
+             <rect>
+              <x>320</x>
+              <y>30</y>
+              <width>91</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: rgb(0, 0, 255);</string>
+            </property>
+            <property name="text">
+             <string>自定义1</string>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="custom2ValueLineEdit">
+            <property name="geometry">
+             <rect>
+              <x>110</x>
+              <y>70</y>
+              <width>91</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: rgb(255, 0, 0);</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="custom2SetPushbutton">
+            <property name="geometry">
+             <rect>
+              <x>250</x>
+              <y>70</y>
+              <width>41</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>设置</string>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="custom3NameLineEdit">
+            <property name="geometry">
+             <rect>
+              <x>320</x>
+              <y>70</y>
+              <width>91</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: rgb(0, 0, 255);</string>
+            </property>
+            <property name="text">
+             <string>自定义3</string>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="custom3GetPushbutton">
+            <property name="geometry">
+             <rect>
+              <x>520</x>
+              <y>70</y>
+              <width>41</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>读取</string>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="custom3ValueLineEdit">
+            <property name="geometry">
+             <rect>
+              <x>420</x>
+              <y>70</y>
+              <width>91</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: rgb(255, 0, 0);</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="custom2GetPushbutton">
+            <property name="geometry">
+             <rect>
+              <x>210</x>
+              <y>70</y>
+              <width>41</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>读取</string>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="custom3SetPushbutton">
+            <property name="geometry">
+             <rect>
+              <x>560</x>
+              <y>70</y>
+              <width>41</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>设置</string>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="custom2NameLineEdit">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>70</y>
+              <width>91</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: rgb(0, 0, 255);</string>
+            </property>
+            <property name="text">
+             <string>自定义2</string>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="custom4ValueLineEdit">
+            <property name="geometry">
+             <rect>
+              <x>110</x>
+              <y>110</y>
+              <width>91</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: rgb(255, 0, 0);</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="custom4SetPushbutton">
+            <property name="geometry">
+             <rect>
+              <x>250</x>
+              <y>110</y>
+              <width>41</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>设置</string>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="custom5NameLineEdit">
+            <property name="geometry">
+             <rect>
+              <x>320</x>
+              <y>110</y>
+              <width>91</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: rgb(0, 0, 255);</string>
+            </property>
+            <property name="text">
+             <string>自定义5</string>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="custom5GetPushbutton">
+            <property name="geometry">
+             <rect>
+              <x>520</x>
+              <y>110</y>
+              <width>41</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>读取</string>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="custom5ValueLineEdit">
+            <property name="geometry">
+             <rect>
+              <x>420</x>
+              <y>110</y>
+              <width>91</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: rgb(255, 0, 0);</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="custom4GetPushbutton">
+            <property name="geometry">
+             <rect>
+              <x>210</x>
+              <y>110</y>
+              <width>41</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>读取</string>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="custom5SetPushbutton">
+            <property name="geometry">
+             <rect>
+              <x>560</x>
+              <y>110</y>
+              <width>41</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>设置</string>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="custom4NameLineEdit">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>110</y>
+              <width>91</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: rgb(0, 0, 255);</string>
+            </property>
+            <property name="text">
+             <string>自定义4</string>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="custom6ValueLineEdit">
+            <property name="geometry">
+             <rect>
+              <x>110</x>
+              <y>150</y>
+              <width>91</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: rgb(255, 0, 0);</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="custom6SetPushbutton">
+            <property name="geometry">
+             <rect>
+              <x>250</x>
+              <y>150</y>
+              <width>41</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>设置</string>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="custom7NameLineEdit">
+            <property name="geometry">
+             <rect>
+              <x>320</x>
+              <y>150</y>
+              <width>91</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: rgb(0, 0, 255);</string>
+            </property>
+            <property name="text">
+             <string>自定义7</string>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="custom7GetPushbutton">
+            <property name="geometry">
+             <rect>
+              <x>520</x>
+              <y>150</y>
+              <width>41</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>读取</string>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="custom7ValueLineEdit">
+            <property name="geometry">
+             <rect>
+              <x>420</x>
+              <y>150</y>
+              <width>91</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: rgb(255, 0, 0);</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="custom6GetPushbutton">
+            <property name="geometry">
+             <rect>
+              <x>210</x>
+              <y>150</y>
+              <width>41</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>读取</string>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="custom7SetPushbutton">
+            <property name="geometry">
+             <rect>
+              <x>560</x>
+              <y>150</y>
+              <width>41</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>设置</string>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="custom6NameLineEdit">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>150</y>
+              <width>91</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: rgb(0, 0, 255);</string>
+            </property>
+            <property name="text">
+             <string>自定义6</string>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="custom8ValueLineEdit">
+            <property name="geometry">
+             <rect>
+              <x>110</x>
+              <y>190</y>
+              <width>91</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: rgb(255, 0, 0);</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="custom8SetPushbutton">
+            <property name="geometry">
+             <rect>
+              <x>250</x>
+              <y>190</y>
+              <width>41</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>设置</string>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="custom9NameLineEdit">
+            <property name="geometry">
+             <rect>
+              <x>320</x>
+              <y>190</y>
+              <width>91</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: rgb(0, 0, 255);</string>
+            </property>
+            <property name="text">
+             <string>自定义9</string>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="custom9GetPushbutton">
+            <property name="geometry">
+             <rect>
+              <x>520</x>
+              <y>190</y>
+              <width>41</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>读取</string>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="custom9ValueLineEdit">
+            <property name="geometry">
+             <rect>
+              <x>420</x>
+              <y>190</y>
+              <width>91</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: rgb(255, 0, 0);</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="custom8GetPushbutton">
+            <property name="geometry">
+             <rect>
+              <x>210</x>
+              <y>190</y>
+              <width>41</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>读取</string>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="custom9SetPushbutton">
+            <property name="geometry">
+             <rect>
+              <x>560</x>
+              <y>190</y>
+              <width>41</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>设置</string>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="custom8NameLineEdit">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>190</y>
+              <width>91</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: rgb(0, 0, 255);</string>
+            </property>
+            <property name="text">
+             <string>自定义8</string>
+            </property>
+           </widget>
+          </widget>
+          <widget class="QGroupBox" name="groupBox_7">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>310</y>
+             <width>471</width>
+             <height>231</height>
+            </rect>
+           </property>
+           <property name="title">
+            <string>参数监视</string>
+           </property>
+           <widget class="QLineEdit" name="arg0ValueLineEdit">
+            <property name="geometry">
+             <rect>
+              <x>120</x>
+              <y>30</y>
+              <width>91</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: rgb(255, 0, 0);</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="readOnly">
+             <bool>true</bool>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="arg0NameLineEdit">
+            <property name="geometry">
+             <rect>
+              <x>20</x>
+              <y>30</y>
+              <width>91</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: rgb(0, 0, 255);</string>
+            </property>
+            <property name="text">
+             <string>参数0</string>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="arg1NameLineEdit">
+            <property name="geometry">
+             <rect>
+              <x>260</x>
+              <y>30</y>
+              <width>91</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: rgb(0, 0, 255);</string>
+            </property>
+            <property name="text">
+             <string>参数1</string>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="arg1ValueLineEdit">
+            <property name="geometry">
+             <rect>
+              <x>360</x>
+              <y>30</y>
+              <width>91</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: rgb(255, 0, 0);</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="readOnly">
+             <bool>true</bool>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="arg2NameLineEdit">
+            <property name="geometry">
+             <rect>
+              <x>20</x>
+              <y>70</y>
+              <width>91</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: rgb(0, 0, 255);</string>
+            </property>
+            <property name="text">
+             <string>参数2</string>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="arg2ValueLineEdit">
+            <property name="geometry">
+             <rect>
+              <x>120</x>
+              <y>70</y>
+              <width>91</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: rgb(255, 0, 0);</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="readOnly">
+             <bool>true</bool>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="arg3NameLineEdit">
+            <property name="geometry">
+             <rect>
+              <x>260</x>
+              <y>70</y>
+              <width>91</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: rgb(0, 0, 255);</string>
+            </property>
+            <property name="text">
+             <string>参数3</string>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="arg3ValueLineEdit">
+            <property name="geometry">
+             <rect>
+              <x>360</x>
+              <y>70</y>
+              <width>91</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: rgb(255, 0, 0);</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="readOnly">
+             <bool>true</bool>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="arg4NameLineEdit">
+            <property name="geometry">
+             <rect>
+              <x>20</x>
+              <y>110</y>
+              <width>91</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: rgb(0, 0, 255);</string>
+            </property>
+            <property name="text">
+             <string>参数4</string>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="arg4ValueLineEdit">
+            <property name="geometry">
+             <rect>
+              <x>120</x>
+              <y>110</y>
+              <width>91</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: rgb(255, 0, 0);</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="readOnly">
+             <bool>true</bool>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="arg5NameLineEdit">
+            <property name="geometry">
+             <rect>
+              <x>260</x>
+              <y>110</y>
+              <width>91</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: rgb(0, 0, 255);</string>
+            </property>
+            <property name="text">
+             <string>参数5</string>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="arg5ValueLineEdit">
+            <property name="geometry">
+             <rect>
+              <x>360</x>
+              <y>110</y>
+              <width>91</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: rgb(255, 0, 0);</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="readOnly">
+             <bool>true</bool>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="arg6NameLineEdit">
+            <property name="geometry">
+             <rect>
+              <x>20</x>
+              <y>150</y>
+              <width>91</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: rgb(0, 0, 255);</string>
+            </property>
+            <property name="text">
+             <string>参数6</string>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="arg6ValueLineEdit">
+            <property name="geometry">
+             <rect>
+              <x>120</x>
+              <y>150</y>
+              <width>91</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: rgb(255, 0, 0);</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="readOnly">
+             <bool>true</bool>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="arg7NameLineEdit">
+            <property name="geometry">
+             <rect>
+              <x>260</x>
+              <y>150</y>
+              <width>91</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: rgb(0, 0, 255);</string>
+            </property>
+            <property name="text">
+             <string>参数7</string>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="arg7ValueLineEdit">
+            <property name="geometry">
+             <rect>
+              <x>360</x>
+              <y>150</y>
+              <width>91</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: rgb(255, 0, 0);</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="readOnly">
+             <bool>true</bool>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="arg8NameLineEdit">
+            <property name="geometry">
+             <rect>
+              <x>20</x>
+              <y>190</y>
+              <width>91</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: rgb(0, 0, 255);</string>
+            </property>
+            <property name="text">
+             <string>参数8</string>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="arg8ValueLineEdit">
+            <property name="geometry">
+             <rect>
+              <x>120</x>
+              <y>190</y>
+              <width>91</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: rgb(255, 0, 0);</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="readOnly">
+             <bool>true</bool>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="arg9NameLineEdit">
+            <property name="geometry">
+             <rect>
+              <x>260</x>
+              <y>190</y>
+              <width>91</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: rgb(0, 0, 255);</string>
+            </property>
+            <property name="text">
+             <string>参数9</string>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="arg9ValueLineEdit">
+            <property name="geometry">
+             <rect>
+              <x>360</x>
+              <y>190</y>
+              <width>91</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: rgb(255, 0, 0);</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="readOnly">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </widget>
+          <widget class="QGroupBox" name="groupBox_8">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>40</y>
+             <width>471</width>
+             <height>271</height>
+            </rect>
+           </property>
+           <property name="title">
+            <string>命令/开关</string>
+           </property>
+           <widget class="QPushButton" name="cmd0PushButton">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>40</y>
+              <width>89</width>
+              <height>41</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>命令0</string>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="cmd1PushButton">
+            <property name="geometry">
+             <rect>
+              <x>130</x>
+              <y>40</y>
+              <width>89</width>
+              <height>41</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>命令1</string>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="cmd3PushButton">
+            <property name="geometry">
+             <rect>
+              <x>130</x>
+              <y>90</y>
+              <width>89</width>
+              <height>41</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>命令3</string>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="cmd2PushButton">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>90</y>
+              <width>89</width>
+              <height>41</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>命令2</string>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="cmd4PushButton">
+            <property name="geometry">
+             <rect>
+              <x>330</x>
+              <y>30</y>
+              <width>61</width>
+              <height>51</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>▲</string>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="cmd6PushButton">
+            <property name="geometry">
+             <rect>
+              <x>260</x>
+              <y>90</y>
+              <width>61</width>
+              <height>51</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>◀</string>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="cmd7PushButton">
+            <property name="geometry">
+             <rect>
+              <x>400</x>
+              <y>90</y>
+              <width>61</width>
+              <height>51</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>▶</string>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="cmd5PushButton">
+            <property name="geometry">
+             <rect>
+              <x>330</x>
+              <y>150</y>
+              <width>61</width>
+              <height>51</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>▼</string>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="cmd8PushButton">
+            <property name="geometry">
+             <rect>
+              <x>330</x>
+              <y>90</y>
+              <width>61</width>
+              <height>51</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>●</string>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="nameOrCmdSetPushButton">
+            <property name="geometry">
+             <rect>
+              <x>360</x>
+              <y>230</y>
+              <width>101</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>名称设置...</string>
+            </property>
+           </widget>
+           <widget class="QGroupBox" name="groupBox_9">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>150</y>
+              <width>261</width>
+              <height>21</height>
+             </rect>
+            </property>
+            <property name="title">
+             <string/>
+            </property>
+            <widget class="QLabel" name="switch0NameLabel">
+             <property name="geometry">
+              <rect>
+               <x>10</x>
+               <y>-5</y>
+               <width>81</width>
+               <height>31</height>
+              </rect>
+             </property>
+             <property name="text">
+              <string>开关0</string>
+             </property>
+            </widget>
+            <widget class="QRadioButton" name="switch0OpenRadioButton">
+             <property name="geometry">
+              <rect>
+               <x>100</x>
+               <y>0</y>
+               <width>71</width>
+               <height>21</height>
+              </rect>
+             </property>
+             <property name="text">
+              <string>开</string>
+             </property>
+            </widget>
+            <widget class="QRadioButton" name="switch0CloseRadioButton">
+             <property name="geometry">
+              <rect>
+               <x>180</x>
+               <y>0</y>
+               <width>81</width>
+               <height>21</height>
+              </rect>
+             </property>
+             <property name="text">
+              <string>关</string>
+             </property>
+             <property name="checked">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </widget>
+           <widget class="QGroupBox" name="groupBox_10">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>180</y>
+              <width>261</width>
+              <height>21</height>
+             </rect>
+            </property>
+            <property name="title">
+             <string/>
+            </property>
+            <widget class="QLabel" name="switch1NameLabel">
+             <property name="geometry">
+              <rect>
+               <x>10</x>
+               <y>-5</y>
+               <width>81</width>
+               <height>31</height>
+              </rect>
+             </property>
+             <property name="text">
+              <string>开关1</string>
+             </property>
+            </widget>
+            <widget class="QRadioButton" name="switch1OpenRadioButton">
+             <property name="geometry">
+              <rect>
+               <x>100</x>
+               <y>0</y>
+               <width>71</width>
+               <height>21</height>
+              </rect>
+             </property>
+             <property name="text">
+              <string>开</string>
+             </property>
+            </widget>
+            <widget class="QRadioButton" name="switch1CloseRadioButton">
+             <property name="geometry">
+              <rect>
+               <x>180</x>
+               <y>0</y>
+               <width>81</width>
+               <height>21</height>
+              </rect>
+             </property>
+             <property name="text">
+              <string>关</string>
+             </property>
+             <property name="checked">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </widget>
+           <widget class="QGroupBox" name="groupBox_11">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>210</y>
+              <width>261</width>
+              <height>21</height>
+             </rect>
+            </property>
+            <property name="title">
+             <string/>
+            </property>
+            <widget class="QLabel" name="switch2NameLabel">
+             <property name="geometry">
+              <rect>
+               <x>10</x>
+               <y>-5</y>
+               <width>81</width>
+               <height>31</height>
+              </rect>
+             </property>
+             <property name="text">
+              <string>开关2</string>
+             </property>
+            </widget>
+            <widget class="QRadioButton" name="switch2OpenRadioButton">
+             <property name="geometry">
+              <rect>
+               <x>100</x>
+               <y>0</y>
+               <width>71</width>
+               <height>21</height>
+              </rect>
+             </property>
+             <property name="text">
+              <string>开</string>
+             </property>
+            </widget>
+            <widget class="QRadioButton" name="switch2CloseRadioButton">
+             <property name="geometry">
+              <rect>
+               <x>180</x>
+               <y>0</y>
+               <width>81</width>
+               <height>21</height>
+              </rect>
+             </property>
+             <property name="text">
+              <string>关</string>
+             </property>
+             <property name="checked">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </widget>
+           <widget class="QGroupBox" name="groupBox_12">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>240</y>
+              <width>261</width>
+              <height>21</height>
+             </rect>
+            </property>
+            <property name="title">
+             <string/>
+            </property>
+            <widget class="QLabel" name="switch3NameLabel">
+             <property name="geometry">
+              <rect>
+               <x>10</x>
+               <y>-5</y>
+               <width>81</width>
+               <height>31</height>
+              </rect>
+             </property>
+             <property name="text">
+              <string>开关3</string>
+             </property>
+            </widget>
+            <widget class="QRadioButton" name="switch3OpenRadioButton">
+             <property name="geometry">
+              <rect>
+               <x>100</x>
+               <y>0</y>
+               <width>71</width>
+               <height>21</height>
+              </rect>
+             </property>
+             <property name="text">
+              <string>开</string>
+             </property>
+            </widget>
+            <widget class="QRadioButton" name="switch3CloseRadioButton">
+             <property name="geometry">
+              <rect>
+               <x>180</x>
+               <y>0</y>
+               <width>81</width>
+               <height>21</height>
+              </rect>
+             </property>
+             <property name="text">
+              <string>关</string>
+             </property>
+             <property name="checked">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </widget>
+          </widget>
+          <widget class="QPushButton" name="saveAsCfgPushButton">
+           <property name="geometry">
+            <rect>
+             <x>710</x>
+             <y>550</y>
+             <width>131</width>
+             <height>24</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>配置另存为...</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="loadCfgPushButton">
+           <property name="geometry">
+            <rect>
+             <x>850</x>
+             <y>550</y>
+             <width>131</width>
+             <height>24</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>加载配置文件...</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="rememberCurrentPushButton">
+           <property name="geometry">
+            <rect>
+             <x>570</x>
+             <y>550</y>
+             <width>131</width>
+             <height>24</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>记住当前配置</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="setDefalufCfgPushButton">
+           <property name="geometry">
+            <rect>
+             <x>990</x>
+             <y>550</y>
+             <width>111</width>
+             <height>24</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>恢复默认配置</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="generalHelpPushButton">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>550</y>
+             <width>89</width>
+             <height>24</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>帮助...</string>
+           </property>
+          </widget>
+          <widget class="QCheckBox" name="showSendDataCheckBox">
+           <property name="geometry">
+            <rect>
+             <x>570</x>
+             <y>580</y>
+             <width>231</width>
+             <height>21</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>显示原始发送数据(十六进制)</string>
+           </property>
+           <property name="checked">
+            <bool>true</bool>
+           </property>
+          </widget>
+          <widget class="QCheckBox" name="showRecvDataCheckBox">
+           <property name="geometry">
+            <rect>
+             <x>850</x>
+             <y>580</y>
+             <width>221</width>
+             <height>21</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>显示原始接收数据(十六进制)</string>
+           </property>
+           <property name="checked">
+            <bool>true</bool>
+           </property>
+           <property name="autoRepeat">
+            <bool>false</bool>
+           </property>
+          </widget>
+         </widget>
+        </item>
+        <item row="3" column="1">
+         <widget class="QTextEdit" name="generalOutputTextEdit">
+          <property name="styleSheet">
+           <string notr="true">color: rgb(0, 255, 0);
+background-color: rgb(0, 0, 0);</string>
+          </property>
+          <property name="lineWrapMode">
+           <enum>QTextEdit::NoWrap</enum>
+          </property>
+          <property name="readOnly">
+           <bool>true</bool>
+          </property>
+          <property name="html">
+           <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'SimSun'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1181</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu45">
+    <property name="title">
+     <string>菜单</string>
+    </property>
+    <addaction name="helpAction"/>
+    <addaction name="aboutAction"/>
+    <addaction name="actionfvdfg"/>
+    <addaction name="separator"/>
+    <addaction name="quitAction"/>
+   </widget>
+   <addaction name="menu45"/>
+  </widget>
+  <action name="helpAction">
+   <property name="text">
+    <string>使用帮助...    </string>
+   </property>
+  </action>
+  <action name="aboutAction">
+   <property name="text">
+    <string>关于软件...</string>
+   </property>
+  </action>
+  <action name="quitAction">
+   <property name="text">
+    <string>退出</string>
+   </property>
+  </action>
+  <action name="actionfvdfg">
+   <property name="text">
+    <string>关于作者...</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>quitAction</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>590</x>
+     <y>418</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
