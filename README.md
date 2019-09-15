@@ -5,3 +5,4 @@
 
 <h2 style="color:blue;"><strong>三、项目实现</strong></h2><p>　　<font color=black>确定基本功能和需求<br></font>　　<font color=black>采用Qt Designer设计出需要用到的界面<br></font>　　<font color=black>通过Qt的QSerialPort库实现基本的串口操作，如修改波特率等<br></font>　　<font color=black>根据用户的界面配置，对串口的收发数据进行处理<br></font>　　<font color=black>实现对蓝牙串口AT指令的解析<br></font>　　<font color=black>通过C语言实现与目标机的通信协议，这个实现也像外提供，用户可以提供这套实现用在目标机，能够快速的与上位机建立通信。<br></font></p>
 <p>　　<font color=black>注：该项目还未完全实现，正在完善中...<br></font></p>
+<h4>更多信息参见：<a href="http://39.108.3.243/mxb/serial-assistant/">http://39.108.3.243/mxb/serial-assistant/</a></h4>
